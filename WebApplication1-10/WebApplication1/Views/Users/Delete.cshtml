@@ -1,0 +1,54 @@
+﻿@model WebApplication1.Models.Users
+
+@{
+    ViewBag.Title = "Пользователи";
+}
+
+<h2>Удалить?</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserLogin.Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserLogin.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserRoles.NmRole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserRoles.NmRole)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Вернуться к списку", "Index")
+        </div>
+    }
+</div>

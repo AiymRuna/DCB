@@ -1,0 +1,70 @@
+﻿@model WebApplication1.Models.ZayavkaOtvet
+
+@{
+    ViewBag.Title = "Ответы по заявкам";
+}
+
+<h2>Удалить?</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Users.FName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Users.FName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zayavka.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zayavka.Comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZayavkaAction.NmAction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZayavkaAction.NmAction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZayavkaStatus.NmZStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZayavkaStatus.NmZStatus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Вернуться к списку", "Index")
+        </div>
+    }
+</div>

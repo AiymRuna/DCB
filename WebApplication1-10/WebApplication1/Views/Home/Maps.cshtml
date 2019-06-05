@@ -1,0 +1,70 @@
+﻿@model WebApplication1.Models.TerminalLocation
+
+@{ 
+    ViewBag.Title = "Maps";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript">
+    </script>
+</head>
+<body>
+    <h2>Maps</h2>
+    
+    <div id="map" style="width: 100%; height: 100vh"></div>
+
+    <script type="text/javascript">
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
+        function init(){
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [42.865388923088396, 74.60104350048829],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 8
+            });
+
+            $.ajax({
+                url: 'http://localhost:1082/Home/getTerminalsLocationApi',
+                method: "GET",
+                success: res => {
+                    res = JSON.parse(res);
+                    for (var item of res) {
+                        console.log(item);
+                        myMap.geoObjects.add(new ymaps.Placemark([item.Longth, item.Width], {
+                            balloonContent: '<p style="margin-bottom: 4px;">' + item.NmOblast + '</p>' +
+                                            '<p style="margin-bottom: 4px;">' + item.NmFilial + '</p>' +
+                                            '<p style="margin-bottom: 4px;">' + item.Address + '</p>',
+                            hintContent: '<p style="margin-bottom: 4px; font-weight: bold;">' + item.Address + '</p>'
+                        }, {
+                            preset: 'islands#icon',
+                            iconColor: '#0095b6'
+                        }))
+
+                    };
+                    myMap.setBounds(myMap.geoObjects.getBounds());
+                },
+                error: () => {
+                    console.log("Error");
+                }
+            });
+            
+            
+
+
+        }
+    </script>
+</body>
+
+</html>
+

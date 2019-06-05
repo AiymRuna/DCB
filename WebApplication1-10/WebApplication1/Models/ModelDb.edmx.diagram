@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad7ef07551a64915ad6a2f059105f9e9" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="DCBModel.Detali" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.Fillial" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.Oblast" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.OrgType" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.TerminalInf" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.TerminalLocation" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.TerminalStatus" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.UserLogin" Width="1.5" PointX="3.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.UserRoles" Width="1.5" PointX="3.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.Users" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.Zayavka" Width="1.5" PointX="8.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.ZayavkaAction" Width="1.5" PointX="8.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.ZayavkaOtvet" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DCBModel.ZayavkaStatus" Width="1.5" PointX="8.25" PointY="12.5" IsExpanded="true" />
+        <AssociationConnector Association="DCBModel.FK_Zayavka_Detali" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_Fillial_Oblast" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_TerminalInf_Fillial" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_Zayavka_Fillial" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_TerminalInf_Oblast" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_Zayavka_Oblast" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_TerminalInf_OrgType" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_TerminalInf_TerminalStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_TerminalLocation_TerminalInf" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_Users_UserLogin" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_Users_UserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_Zayavka_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_ZayavkaOtvet_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_ZayavkaOtvet_Zayavka" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_ZayavkaOtvet_ZayavkaAction" ManuallyRouted="false" />
+        <AssociationConnector Association="DCBModel.FK_ZayavkaOtvet_ZayavkaStatus" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DCBModel.GetTerminalLocationWithAddress" Width="1.5" PointX="10.375" PointY="0.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

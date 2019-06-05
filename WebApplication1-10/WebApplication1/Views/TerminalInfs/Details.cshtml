@@ -1,0 +1,105 @@
+﻿@model WebApplication1.Models.TerminalInf
+
+@{
+    ViewBag.Title = "Терминалы";
+}
+
+<h2>Детали</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomerTerminal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomerTerminal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shtrihkod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shtrihkod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOrg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOrg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SummArenda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SummArenda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fillial.NmFilial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fillial.NmFilial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oblast.NmOblast)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Oblast.NmOblast)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrgType.NmOrgType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrgType.NmOrgType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TerminalStatus.NmTerStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TerminalStatus.NmTerStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Вернуться к списку", "Index")
+</p>

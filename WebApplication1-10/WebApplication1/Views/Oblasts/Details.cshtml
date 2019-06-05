@@ -1,0 +1,25 @@
+﻿@model WebApplication1.Models.Oblast
+
+@{
+    ViewBag.Title = "Области";
+}
+
+<h2>Детали</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmOblast)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmOblast)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Вернуться к списку", "Index")
+</p>

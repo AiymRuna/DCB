@@ -1,0 +1,98 @@
+﻿@model IEnumerable<WebApplication1.Models.TerminalInf>
+
+@{
+    ViewBag.Title = "Терминалы";
+}
+
+<h2>Терминалы</h2>
+@Html.ActionLink("Export to Excel", "Reports", new { ReportType = "Excel" }) | 
+@Html.ActionLink("Export to PDF", "Reports", new { ReportType = "PDF" }) |
+@Html.ActionLink("Export to Word", "Reports", new { ReportType = "Word" })
+
+<br /> <br />
+
+<p>
+    @Html.ActionLink("Добавить", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Oblast.NmOblast)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fillial.NmFilial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomerTerminal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shtrihkod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TerminalStatus.NmTerStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOrg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrgType.NmOrgType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SummArenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Oblast.NmOblast)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fillial.NmFilial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomerTerminal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shtrihkod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TerminalStatus.NmTerStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOrg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrgType.NmOrgType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SummArenda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Просмотреть", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

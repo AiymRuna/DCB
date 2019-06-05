@@ -1,0 +1,65 @@
+﻿@model WebApplication1.Models.Zayavka
+
+@{
+    ViewBag.Title = "Заявки";
+}
+
+<h2>Детали</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detali.NmDetal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detali.NmDetal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fillial.NmFilial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fillial.NmFilial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oblast.NmOblast)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Oblast.NmOblast)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Users.FName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Users.FName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Вернуться к списку", "Index")
+</p>

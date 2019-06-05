@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DCBModelContainer" CdmEntityContainer="DCBEntities">
+    <EntitySetMapping Name="Detali">
+      <EntityTypeMapping TypeName="DCBModel.Detali">
+        <MappingFragment StoreEntitySet="Detali">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NmDetal" ColumnName="NmDetal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fillial">
+      <EntityTypeMapping TypeName="DCBModel.Fillial">
+        <MappingFragment StoreEntitySet="Fillial">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdOblast" ColumnName="IdOblast" />
+          <ScalarProperty Name="NmFilial" ColumnName="NmFilial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oblast">
+      <EntityTypeMapping TypeName="DCBModel.Oblast">
+        <MappingFragment StoreEntitySet="Oblast">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NmOblast" ColumnName="NmOblast" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrgType">
+      <EntityTypeMapping TypeName="DCBModel.OrgType">
+        <MappingFragment StoreEntitySet="OrgType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NmOrgType" ColumnName="NmOrgType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DCBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TerminalInf">
+      <EntityTypeMapping TypeName="DCBModel.TerminalInf">
+        <MappingFragment StoreEntitySet="TerminalInf">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdOblast" ColumnName="IdOblast" />
+          <ScalarProperty Name="IdFilial" ColumnName="IdFilial" />
+          <ScalarProperty Name="NomerTerminal" ColumnName="NomerTerminal" />
+          <ScalarProperty Name="Shtrihkod" ColumnName="Shtrihkod" />
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IdTypeOrg" ColumnName="IdTypeOrg" />
+          <ScalarProperty Name="NameOrg" ColumnName="NameOrg" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="SummArenda" ColumnName="SummArenda" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TerminalLocation">
+      <EntityTypeMapping TypeName="DCBModel.TerminalLocation">
+        <MappingFragment StoreEntitySet="TerminalLocation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdTerminal" ColumnName="IdTerminal" />
+          <ScalarProperty Name="Longth" ColumnName="Longth" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TerminalStatus">
+      <EntityTypeMapping TypeName="DCBModel.TerminalStatus">
+        <MappingFragment StoreEntitySet="TerminalStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NmTerStatus" ColumnName="NmTerStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogin">
+      <EntityTypeMapping TypeName="DCBModel.UserLogin">
+        <MappingFragment StoreEntitySet="UserLogin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="DCBModel.UserRoles">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NmRole" ColumnName="NmRole" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DCBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdLogin" ColumnName="IdLogin" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zayavka">
+      <EntityTypeMapping TypeName="DCBModel.Zayavka">
+        <MappingFragment StoreEntitySet="Zayavka">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IdOblast" ColumnName="IdOblast" />
+          <ScalarProperty Name="IdFilial" ColumnName="IdFilial" />
+          <ScalarProperty Name="IdDetal" ColumnName="IdDetal" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZayavkaAction">
+      <EntityTypeMapping TypeName="DCBModel.ZayavkaAction">
+        <MappingFragment StoreEntitySet="ZayavkaAction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NmAction" ColumnName="NmAction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZayavkaOtvet">
+      <EntityTypeMapping TypeName="DCBModel.ZayavkaOtvet">
+        <MappingFragment StoreEntitySet="ZayavkaOtvet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IdZayavka" ColumnName="IdZayavka" />
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZayavkaStatus">
+      <EntityTypeMapping TypeName="DCBModel.ZayavkaStatus">
+        <MappingFragment StoreEntitySet="ZayavkaStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NmZStatus" ColumnName="NmZStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GetTerminalLocationWithAddress">
+      <EntityTypeMapping TypeName="IsTypeOf(DCBModel.GetTerminalLocationWithAddress)">
+        <MappingFragment StoreEntitySet="GetTerminalLocationWithAddress">
+          <ScalarProperty Name="NmFilial" ColumnName="NmFilial" />
+          <ScalarProperty Name="NmOblast" ColumnName="NmOblast" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Longth" ColumnName="Longth" />
+          <ScalarProperty Name="IdTerminal" ColumnName="IdTerminal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

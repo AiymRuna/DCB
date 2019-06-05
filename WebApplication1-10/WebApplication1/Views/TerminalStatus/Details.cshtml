@@ -1,0 +1,25 @@
+﻿@model WebApplication1.Models.TerminalStatus
+
+@{
+    ViewBag.Title = "Статусы терминалов";
+}
+
+<h2>Детали</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmTerStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmTerStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Вернуться к списку", "Index")
+</p>

@@ -1,0 +1,25 @@
+﻿@model WebApplication1.Models.ZayavkaAction
+
+@{
+    ViewBag.Title = "Действия по заявкам";
+}
+
+<h2>Детали</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NmAction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NmAction)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Вернуться к списку", "Index")
+</p>
